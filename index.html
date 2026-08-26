@@ -3,45 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SoftRain7 — Сайт</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>SoftRain7</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #111;
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .box {
+      max-width: 400px;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      background: #6c5ce7;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      font-weight: bold;
+      margin: 0 auto 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      color: #aaa;
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      color: #a29bfe;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .about {
+      color: #ccc;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .angry {
+      color: #ff6b6b;
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin: 25px 0;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #2d2d44;
+      color: #a29bfe;
+      text-decoration: none;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    footer {
+      margin-top: 50px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* Чёрный экран */
+    #screen {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #screen.show {
+      display: flex;
+    }
+
+    #screen span {
+      color: white;
+      font-size: 3.5rem;
+      font-weight: 900;
+      letter-spacing: 6px;
+    }
+  </style>
 </head>
 <body>
-  <div class="container" id="mainContent">
-    <header>
-      <div class="avatar">S</div>
-      <h1>SoftRain7</h1>
-      <p class="tagline">Привет, я только начинаю свой путь в вебе</p>
-    </header>
 
-    <section class="about">
-      <h2>О себе</h2>
-      <p>
-        Здесь можно написать пару предложений о себе.<br>
-        Чем увлекаешься, чем занимаешься или что хочешь рассказать миру.
-      </p>
-      <p class="angry-mom" id="angryMom">Мать злая</p>
-    </section>
+  <div class="box">
+    <div class="avatar">S</div>
+    <h1>SoftRain7</h1>
+    <p class="tagline">Привет, я только начинаю свой путь в вебе</p>
 
-    <section class="links">
-      <h2>Ссылки</h2>
-      <div class="buttons">
-        <a href="https://github.com/SoftRain7" class="btn" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </section>
+    <div class="section-title">О себе</div>
+    <p class="about">
+      Здесь можно написать пару предложений о себе.<br>
+      Чем увлекаешься, чем занимаешься или что хочешь рассказать миру.
+    </p>
 
-    <footer>
-      <p>Сделано с ❤️ · 2026</p>
-    </footer>
+    <div class="angry" onclick="openScreen()">Мать злая</div>
+
+    <div class="section-title">Ссылки</div>
+    <a href="https://github.com/SoftRain7" class="btn">GitHub</a>
+
+    <footer>Сделано с ❤️ · 2026</footer>
   </div>
 
-  <div id="blackScreen" class="black-screen">
-    <div class="big-text">ОЧЕНЬ</div>
+  <div id="screen" onclick="closeScreen()">
+    <span>ОЧЕНЬ</span>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    function openScreen() {
+      document.getElementById('screen').classList.add('show');
+    }
+    function closeScreen() {
+      document.getElementById('screen').classList.remove('show');
+    }
+  </script>
+
 </body>
 </html>
