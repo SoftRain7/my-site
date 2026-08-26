@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SoftRain7</title>
+  <title>Мать злая</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
@@ -19,70 +19,12 @@
       text-align: center;
     }
 
-    .box {
-      max-width: 400px;
-    }
-
-    .avatar {
-      width: 90px;
-      height: 90px;
-      background: #6c5ce7;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 36px;
-      font-weight: bold;
-      margin: 0 auto 20px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
-
-    .tagline {
-      color: #aaa;
-      margin-bottom: 40px;
-    }
-
-    .section-title {
-      color: #a29bfe;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-    }
-
-    .about {
-      color: #ccc;
-      margin-bottom: 30px;
-      line-height: 1.5;
-    }
-
     .angry {
       color: #ff6b6b;
-      font-size: 1.6rem;
+      font-size: 2.2rem;
       font-weight: bold;
-      margin: 25px 0;
       cursor: pointer;
       user-select: none;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 28px;
-      background: #2d2d44;
-      color: #a29bfe;
-      text-decoration: none;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
-
-    footer {
-      margin-top: 50px;
-      color: #666;
-      font-size: 0.9rem;
     }
 
     /* Чёрный экран */
@@ -128,24 +70,7 @@
 </head>
 <body>
 
-  <div class="box">
-    <div class="avatar">S</div>
-    <h1>SoftRain7</h1>
-    <p class="tagline">Привет, я только начинаю свой путь в вебе</p>
-
-    <div class="section-title">О себе</div>
-    <p class="about">
-      Здесь можно написать пару предложений о себе.<br>
-      Чем увлекаешься, чем занимаешься или что хочешь рассказать миру.
-    </p>
-
-    <div class="angry" onclick="openScreen()">Мать злая</div>
-
-    <div class="section-title">Ссылки</div>
-    <a href="https://github.com/SoftRain7" class="btn">GitHub</a>
-
-    <footer>Сделано с ❤️ · 2026</footer>
-  </div>
+  <div class="angry" onclick="openScreen()">Мать злая</div>
 
   <div id="screen" onclick="closeScreen()">
     <span>ОЧЕНЬ</span>
