@@ -1,14 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const angryMom = document.getElementById('angryMom');
-  const overlay = document.getElementById('overlay');
+document.addEventListener('DOMContentLoaded', function() {
+  var angryMom = document.getElementById('angryMom');
+  var blackScreen = document.getElementById('blackScreen');
 
-  // Нажатие на «Мать злая»
-  angryMom.addEventListener('click', () => {
-    overlay.classList.add('active');
+  angryMom.addEventListener('click', function() {
+    blackScreen.classList.add('show');
   });
 
-  // Нажатие на чёрный экран — закрыть
-  overlay.addEventListener('click', () => {
-    overlay.classList.remove('active');
+  blackScreen.addEventListener('click', function() {
+    blackScreen.classList.remove('show');
   });
 });
